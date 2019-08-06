@@ -13,7 +13,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/', (req, res) => {
-  res.send('hello, use /api/product to get demo-product json data.')
+  res.send('hello, use /api/products to get demo-product json data.')
 })
 
 app.get('/api/products', (req, res) => {
