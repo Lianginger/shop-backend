@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 
 app.get('/api/products', (req, res) => {
   Product.findAll({}).then(products => {
-    res.json(products)
+    res.json({ products })
   })
 })
 
@@ -42,3 +42,5 @@ app.post('/api/product', (req, res) => {
 app.listen(port, () => {
   console.log(`Express is running on ${port}`)
 })
+
+module.exports = app
